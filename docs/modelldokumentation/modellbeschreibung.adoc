@@ -1,7 +1,0 @@
-== Modellbeschreibung
-
-<Beschreibung einfügen>
-
-ifdef::backend-pdf[]
-<<<
-endif::[]
