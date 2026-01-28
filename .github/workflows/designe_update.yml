@@ -1,18 +1,22 @@
 
-name: Trigger Repo B
+name: Trigger Repos
 
 on:
   push:
-    branches: [ main ]
-
+    branches: [main, master]
+    paths:
+      - 'themes/*'
+      - 'fonts/*'
+  workflow_dispatch:
+  
 jobs:
   trigger:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger workflow in Repo B
+      - name: Trigger Pages Publish in other Repos
         run: |
           curl -X POST \
             -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer ${{ secrets.REPO_B_TOKEN }}" \
-            https://api.github.com/repos/OWNER/REPO_B/dispatches \
+            -H "Authorization: Bearer ${{ secrets.Disbatch_Action }}" \
+            https://api.github.com/repos/ch-sz-geo/T000_TestRepoWED/dispatches \
             -d '{"event_type":"run-external-workflow","client_payload":{"ref":"main"}}'
