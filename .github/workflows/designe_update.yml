@@ -2,11 +2,11 @@
 name: Trigger Repos
 
 on:
-  workflow_run: 
-    workflows: [pages-build-deployment]
-    types:
-      - completed
-    branches: [main, master]
+  #workflow_run: 
+  #  workflows: [pages-build-deployment]
+  #  types:
+  #    - completed
+  #  branches: [main, master]
     
   workflow_dispatch:
   
