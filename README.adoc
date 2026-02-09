@@ -1,7 +1,7 @@
 // Erklärung und Link auf Website
 ifdef::env-github[]
 [discrete]
-= Standart Designes
+= Standart Designs
 Die akktuellen Designefiles sind unter https://ch-sz-geo.github.io/A000_defaultDesign/ sichtbar.
 
 endif::[]
