@@ -14,20 +14,6 @@ jobs:
   trigger_Pages_Publish_in_other_Repo:
     runs-on: ubuntu-latest
     steps:
-      - name: T000_TestRepoWED
-        run: |
-          curl -X POST \
-            -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer ${{ secrets.Disbatch_Action }}" \
-            https://api.github.com/repos/ch-sz-geo/T000_TestRepoWED/dispatches \
-            -d '{"event_type":"run-external-workflow","client_payload":{"ref":"main"}}'
-      - name: T001_TestRepoWED
-        run: |
-          curl -X POST \
-            -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer ${{ secrets.Disbatch_Action }}" \
-            https://api.github.com/repos/ch-sz-geo/T001_TestRepoWED/dispatches \
-            -d '{"event_type":"run-external-workflow","client_payload":{"ref":"main"}}'
       - name: A254
         run: |
           curl -X POST \
